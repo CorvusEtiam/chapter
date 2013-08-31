@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+<Place name="intro">
+  <Action type="text" keyword="about-room">I am waking up. I am so tired. 
+    What the hell is that place. I feel pain in cross. It is dark here. 
+    And I lie on the table. Brrr... And it is cold here. Really cold.
+    I should +check+ that place +around+
+  </Action> 
+  <Action type="text" keyword="check-around">
+    It is dark here. But maybe if i stand up I could reach some light
+    switch. I don't have anything with me. 
+  </Action>
+  <Action type="switch" keyword="switch-on" goto="level1">
+    I get some light
+  </Action>
+  <Action type="get" keyword="get-piece-of-cloth" has="no">
+    <Item type="piece-of-cloth" num="2">
+      Small piece of cloth
+    </Item>
+  </Action>
+  <Action type="use" keyword="cloth-on-foots" has="piece-of-cloth">
+    Now glass on the floor is not a problem
+  </Action>
+  <Action type="move" has="cloth-on-foot" keyword="to-wall">
+    Well now I can use switch. Maybe I should +switch on+
+  </Action> 
+</Place>
+<Place name="level1">
+  <Action type="text" keyword="check-around">
+    Nothing unusual
+  </Action>
+
+</Place>
+
+</Data>
